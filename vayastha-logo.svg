@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 88">
+  <title>Vayastha</title>
+  <g transform="translate(110 4)" fill="none" stroke="#65243b" stroke-width="1.55" stroke-linejoin="round">
+    <path d="M0 37Q-16 18 0 1Q16 18 0 37Z"/>
+    <path d="M0 37Q-24 33-23 8Q-5 8 0 37ZM0 37Q24 33 23 8Q5 8 0 37Z"/>
+    <path d="M0 37Q-20 49-33 28Q-16 18 0 37ZM0 37Q20 49 33 28Q16 18 0 37Z"/>
+    <g fill="#65243b" stroke="none"><circle cy="13" r="2"/><path d="M-44 32Q-38 31-36 40Q-43 40-44 32ZM44 32Q38 31 36 40Q43 40 44 32Z"/></g>
+  </g>
+  <text x="110" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" letter-spacing="5" fill="#211d19">VAYASTHA</text>
+</svg>
