@@ -104,3 +104,23 @@ footer .site-logo { box-sizing: content-box; width: 110px; padding: 7px 12px; ba
 .gallery-strip > div:first-child { border-radius: 48% 48% 3px 3px / 21% 21% 3px 3px }
 .gallery .listing-slide img { object-fit: contain; background: #faf4ea }
 .gallery figcaption:not([hidden]) { position: static; width: max-content; margin: 5px auto 0 }
+
+.back-to-top {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--wine);
+  color: white;
+  font-size: 25px;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #352d2533;
+}
+.back-to-top[hidden] { display: none }
+footer .wrap { padding-right: 56px }

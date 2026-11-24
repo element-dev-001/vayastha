@@ -44,3 +44,12 @@ strip.addEventListener("scroll", () => {
   controls.querySelector("span").textContent = (currentSlide() + 1) + " / " + count;
 });
 controls.hidden = false;
+
+const backToTop = document.querySelector(".back-to-top");
+if ("IntersectionObserver" in window) {
+  backToTop.hidden = true;
+  const headerObserver = new IntersectionObserver(([header]) => {
+    backToTop.hidden = header.isIntersecting;
+  });
+  headerObserver.observe(document.getElementById("top"));
+}
