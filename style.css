@@ -68,3 +68,39 @@ footer p { font-size: 14px }
 .site-logo { display: block; width: 150px; height: auto }
 footer .site-logo { box-sizing: content-box; width: 110px; padding: 7px 12px; background: #faf7ef; border-radius: 3px }
 @media (max-width: 720px) { header .site-logo { width: 125px } }
+
+.gallery { min-width: 0; position: relative }
+.gallery-strip { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; border-radius: 48% 48% 3px 3px / 21% 21% 3px 3px }
+.gallery-strip > div { flex: 0 0 100%; overflow: hidden; scroll-snap-align: start }
+.gallery-strip img { border-radius: 0 }
+.cream-view img { transform: scale(2); transform-origin: 36% 31% }
+.lid-view img { transform: scale(1.8); transform-origin: 70% 76% }
+.gallery figcaption:not([hidden]) { position: absolute; right: 12px; bottom: 12px; display: flex; align-items: center; border-radius: 30px; background: #faf7ef; color: #352d25; font-size: 13px }
+.gallery button { width: 44px; height: 44px; border: 0; background: transparent; color: inherit; cursor: pointer; font-size: 20px }
+
+.feature { display: grid; grid-template-columns: 4fr 5fr; background: #efe7da }
+.texture { min-height: 280px; position: relative; overflow: hidden }
+.texture img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #efdfce }
+.feature-copy { padding: clamp(28px, 4vw, 64px) }
+.feature-copy > p { max-width: 45ch }
+.specs { margin: 24px 0 0 }
+.specs div { display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #cfc0b0; padding: 9px 0 }
+.specs dt { color: #635548 }
+.specs dd { margin: 0; text-align: right }
+.ritual { padding-block: clamp(32px, 5vw, 80px) }
+.ritual-steps { list-style: none; counter-reset: ritual; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 30px 0 }
+.ritual-steps li { border-top: 1px solid var(--rule); padding-top: 16px; counter-increment: ritual }
+.ritual-steps li::before { content: counter(ritual, decimal-leading-zero); color: var(--wine); font: italic 24px Georgia, serif }
+.ritual-steps h3 { font: 24px Georgia, serif; margin: 12px 0 8px }
+.ritual-steps p { color: #62584c }
+@media (max-width: 720px) {
+  .feature { grid-template-columns: 1fr }
+  .texture { min-height: 0; aspect-ratio: 4 / 3 }
+  .ritual-steps { grid-template-columns: repeat(2, 1fr) }
+}
+@media (max-width: 420px) { .ritual-steps { grid-template-columns: 1fr } }
+
+.gallery-strip:has(.listing-slide) { border-radius: 3px }
+.gallery-strip > div:first-child { border-radius: 48% 48% 3px 3px / 21% 21% 3px 3px }
+.gallery .listing-slide img { object-fit: contain; background: #faf4ea }
+.gallery figcaption:not([hidden]) { position: static; width: max-content; margin: 5px auto 0 }
